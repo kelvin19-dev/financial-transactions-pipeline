@@ -19,7 +19,7 @@ class TransactionStatus(str, Enum):
 class CustomerModel(BaseModel):
     customer_id: str
     name: str
-    email: str  # Using str instead of EmailStr to avoid additional dependencies
+    email: str  
 
 class MetadataModel(BaseModel):
     ip_address: Optional[str] = None
@@ -32,7 +32,7 @@ class TransactionBase(BaseModel):
     currency: str
     transaction_type: TransactionType
     status: TransactionStatus
-    date: str  # Keeping as string for simplicity
+    date: str  
     
     @validator('date')
     def validate_date_format(cls, v):

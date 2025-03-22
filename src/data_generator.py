@@ -1,4 +1,3 @@
-# src/data_generator.py
 import json
 import csv
 import os

@@ -6,7 +6,7 @@ import os
 import time
 import logging
 from datetime import datetime, timedelta
-# Removed unused jwt import for clarity
+
 from .models import PaginatedTransactionResponse, TransactionResponse
 from .db import DuckDBHandler
 
@@ -23,10 +23,10 @@ app = FastAPI(
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins in a development setting
+    allow_origins=["*"],  
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"],  
+    allow_headers=["*"],  
 )
 
 # Simple rate limiting middleware
@@ -108,7 +108,6 @@ def health_check():
     """Health check endpoint"""
     return {"status": "healthy", "timestamp": datetime.now().isoformat()}
 
-# ... [other imports and endpoints]
 
 @app.get("/test_db")
 def test_db(db: DuckDBHandler = Depends(get_db)):
