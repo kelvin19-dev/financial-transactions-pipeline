@@ -1,0 +1,19 @@
+# Core dependencies
+fastapi==0.109.2       # API framework
+uvicorn==0.27.1        # ASGI server
+pydantic==2.6.1        # Data validation and serialization
+duckdb==0.9.2          # Database
+polars==0.20.6         # Data processing
+pandas==2.2.0          # Data manipulation (required by DuckDB)
+pyarrow==15.0.0        # Arrow format support (required by Polars)
+
+# SFTP and file handling
+paramiko==3.4.0        # SFTP client
+
+# Utilities
+python-dotenv==1.0.1   # Environment variable management
+python-dateutil==2.8.2 # Date handling
+typing-extensions==4.9.0  # Type hints
+
+# Testing and development
+pytest==8.0.1          # Testing framework
